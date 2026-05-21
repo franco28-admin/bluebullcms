@@ -142,24 +142,27 @@ function initLeadForm() {
         document.head.appendChild(style);
       }
 
-      // Simulate API request to yield standard fast premium experience
-      setTimeout(() => {
-        // Collect form data for developer insights
-        const formData = {
-          fullname: document.getElementById("fullname").value,
-          email: document.getElementById("email").value,
-          company: document.getElementById("company").value,
-          website: document.getElementById("website").value,
-          market: document.getElementById("market-select").value,
-          budget: document.getElementById("budget").value,
-          message: document.getElementById("message").value
-        };
-
-        console.log("BlueBull Tech Lead Capture Submitted: ", formData);
-
-        // OPTION C: Hide the form completely and display a gorgeous premium success card
-        renderSuccessState(formContainer, formData.fullname);
-      }, 1500);
+      // Real API request to Netlify Forms
+      const formData = new FormData(form);
+      
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        console.log("BlueBull Tech Lead Capture Submitted Successfully");
+        // Show premium success card
+        renderSuccessState(formContainer, document.getElementById("fullname").value);
+      })
+      .catch((error) => {
+        console.error("Form submission error:", error);
+        alert("Hubo un error al enviar el formulario. Por favor, intentá nuevamente.");
+        
+        // Revert UI to allow retry
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      });
     }
   });
 }

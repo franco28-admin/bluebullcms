@@ -686,36 +686,40 @@
               <p>Fill out the form to evaluate your project. We'll be in touch in less than 24 hours.</p>
             </div>
             
-            <form id="lead-form" novalidate>
+            <form id="lead-form" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="lead-form" />
+              <p class="hidden" style="display: none;">
+                <label>No llenes esto si eres humano: <input name="bot-field" /></label>
+              </p>
               <div class="form-grid">
                 <!-- Nombre y Apellido -->
                 <div class="form-group">
                   <label for="fullname" class="form-label">First and Last Name</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="e.g. John Doe" required />
+                  <input type="text" id="fullname" name="Nombre Completo" class="form-control" placeholder="e.g. John Doe" required />
                 </div>
                 
                 <!-- Email corporativo -->
                 <div class="form-group">
                   <label for="email" class="form-label">Corporate Email</label>
-                  <input type="email" id="email" class="form-control" placeholder="e.g. name@company.com" required />
+                  <input type="email" id="email" name="Correo Electrónico" class="form-control" placeholder="e.g. name@company.com" required />
                 </div>
                 
                 <!-- Nombre de la Empresa -->
                 <div class="form-group">
                   <label for="company" class="form-label">Company / Operator</label>
-                  <input type="text" id="company" class="form-control" placeholder="e.g. BlueBull Casino" required />
+                  <input type="text" id="company" name="Empresa/Casino" class="form-control" placeholder="e.g. BlueBull Casino" required />
                 </div>
 
                 <!-- Sitio web (Opcional) -->
                 <div class="form-group">
                   <label for="website" class="form-label">Website</label>
-                  <input type="url" id="website" class="form-control" placeholder="e.g. https://mywebsite.com" />
+                  <input type="url" id="website" name="Sitio Web" class="form-control" placeholder="e.g. https://mywebsite.com" />
                 </div>
 
                 <!-- Mercado de Interés -->
                 <div class="form-group">
                   <label for="market-select" class="form-label">Target Market</label>
-                  <select id="market-select" class="form-control" required>
+                  <select id="market-select" name="Mercado de Interés" class="form-control" required>
                     Select a market
                     Latin America (LATAM)
                     European Union (EU)
@@ -726,7 +730,7 @@
                 <!-- Presupuesto Estimado mensual -->
                 <div class="form-group">
                   <label for="budget" class="form-label">Monthly Acquisition Budget</label>
-                  <select id="budget" class="form-control" required>
+                  <select id="budget" name="Presupuesto Mensual Estimado" class="form-control" required>
                     Select a range
                     <option value="tier1">$5,000 - $15,000 USD</option>
                     <option value="tier2">$15,000 - $50,000 USD</option>
@@ -737,7 +741,7 @@
                 <!-- Mensaje / Detalles -->
                 <div class="form-group form-full-width">
                   <label for="message" class="form-label">Project Details</label>
-                  <textarea id="message" class="form-control" placeholder="Briefly tell us what marketing or CRM solutions you are looking for..."></textarea>
+                  <textarea id="message" name="Mensaje / Requisitos" class="form-control" placeholder="Briefly tell us what marketing or CRM solutions you are looking for..."></textarea>
                 </div>
               </div>
               

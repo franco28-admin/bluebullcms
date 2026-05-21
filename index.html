@@ -686,36 +686,40 @@
               <p><!--i18n:form_desc-->Completá el formulario para evaluar tu proyecto. Nos pondremos en contacto en menos de 24 horas.<!--/i18n--></p>
             </div>
             
-            <form id="lead-form" novalidate>
+            <form id="lead-form" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="lead-form" />
+              <p class="hidden" style="display: none;">
+                <label>No llenes esto si eres humano: <input name="bot-field" /></label>
+              </p>
               <div class="form-grid">
                 <!-- Nombre y Apellido -->
                 <div class="form-group">
                   <label for="fullname" class="form-label"><!--i18n:form_label_fullname-->Nombre y Apellido<!--/i18n--></label>
-                  <!--i18n:input_fullname--><input type="text" id="fullname" class="form-control" placeholder="Ej: Nombre Apellido" required /><!--/i18n-->
+                  <!--i18n:input_fullname--><input type="text" id="fullname" name="Nombre Completo" class="form-control" placeholder="Ej: Nombre Apellido" required /><!--/i18n-->
                 </div>
                 
                 <!-- Email corporativo -->
                 <div class="form-group">
                   <label for="email" class="form-label"><!--i18n:form_label_email-->Email Corporativo<!--/i18n--></label>
-                  <!--i18n:input_email--><input type="email" id="email" class="form-control" placeholder="Ej: nombre@empresa.com" required /><!--/i18n-->
+                  <!--i18n:input_email--><input type="email" id="email" name="Correo Electrónico" class="form-control" placeholder="Ej: nombre@empresa.com" required /><!--/i18n-->
                 </div>
                 
                 <!-- Nombre de la Empresa -->
                 <div class="form-group">
                   <label for="company" class="form-label"><!--i18n:form_label_company-->Empresa / Operador<!--/i18n--></label>
-                  <!--i18n:input_company--><input type="text" id="company" class="form-control" placeholder="Ej: BlueBull Casino" required /><!--/i18n-->
+                  <!--i18n:input_company--><input type="text" id="company" name="Empresa/Casino" class="form-control" placeholder="Ej: BlueBull Casino" required /><!--/i18n-->
                 </div>
 
                 <!-- Sitio web (Opcional) -->
                 <div class="form-group">
                   <label for="website" class="form-label"><!--i18n:form_label_website-->Sitio Web<!--/i18n--></label>
-                  <!--i18n:input_website--><input type="url" id="website" class="form-control" placeholder="Ej: https://misitioweb.com" /><!--/i18n-->
+                  <!--i18n:input_website--><input type="url" id="website" name="Sitio Web" class="form-control" placeholder="Ej: https://misitioweb.com" /><!--/i18n-->
                 </div>
 
                 <!-- Mercado de Interés -->
                 <div class="form-group">
                   <label for="market-select" class="form-label"><!--i18n:form_label_market-->Mercado Objetivo<!--/i18n--></label>
-                  <select id="market-select" class="form-control" required>
+                  <select id="market-select" name="Mercado de Interés" class="form-control" required>
                     <!--i18n:market_select_default--><option value="" disabled selected>Seleccioná un mercado</option><!--/i18n-->
                     <!--i18n:market_select_latam--><option value="latam">Latinoamérica (LATAM)</option><!--/i18n-->
                     <!--i18n:market_select_eu--><option value="eu">Unión Europea (EU)</option><!--/i18n-->
@@ -726,7 +730,7 @@
                 <!-- Presupuesto Estimado mensual -->
                 <div class="form-group">
                   <label for="budget" class="form-label"><!--i18n:form_label_budget-->Presupuesto Mensual Adquisición<!--/i18n--></label>
-                  <select id="budget" class="form-control" required>
+                  <select id="budget" name="Presupuesto Mensual Estimado" class="form-control" required>
                     <!--i18n:budget_select_default--><option value="" disabled selected>Seleccioná un rango</option><!--/i18n-->
                     <option value="tier1">$5,000 - $15,000 USD</option>
                     <option value="tier2">$15,000 - $50,000 USD</option>
@@ -737,7 +741,7 @@
                 <!-- Mensaje / Detalles -->
                 <div class="form-group form-full-width">
                   <label for="message" class="form-label"><!--i18n:form_label_message-->Detalles del Proyecto<!--/i18n--></label>
-                  <!--i18n:input_message--><textarea id="message" class="form-control" placeholder="Contanos brevemente qué soluciones de marketing o CRM estás buscando..."></textarea><!--/i18n-->
+                  <!--i18n:input_message--><textarea id="message" name="Mensaje / Requisitos" class="form-control" placeholder="Contanos brevemente qué soluciones de marketing o CRM estás buscando..."></textarea><!--/i18n-->
                 </div>
               </div>
               

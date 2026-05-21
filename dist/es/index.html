@@ -686,36 +686,40 @@
               <p>Completá el formulario para evaluar tu proyecto. Nos pondremos en contacto en menos de 24 horas.</p>
             </div>
             
-            <form id="lead-form" novalidate>
+            <form id="lead-form" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="lead-form" />
+              <p class="hidden" style="display: none;">
+                <label>No llenes esto si eres humano: <input name="bot-field" /></label>
+              </p>
               <div class="form-grid">
                 <!-- Nombre y Apellido -->
                 <div class="form-group">
                   <label for="fullname" class="form-label">Nombre y Apellido</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="Ej: Nombre Apellido" required />
+                  <input type="text" id="fullname" name="Nombre Completo" class="form-control" placeholder="Ej: Nombre Apellido" required />
                 </div>
                 
                 <!-- Email corporativo -->
                 <div class="form-group">
                   <label for="email" class="form-label">Email Corporativo</label>
-                  <input type="email" id="email" class="form-control" placeholder="Ej: nombre@empresa.com" required />
+                  <input type="email" id="email" name="Correo Electrónico" class="form-control" placeholder="Ej: nombre@empresa.com" required />
                 </div>
                 
                 <!-- Nombre de la Empresa -->
                 <div class="form-group">
                   <label for="company" class="form-label">Empresa / Operador</label>
-                  <input type="text" id="company" class="form-control" placeholder="Ej: BlueBull Casino" required />
+                  <input type="text" id="company" name="Empresa/Casino" class="form-control" placeholder="Ej: BlueBull Casino" required />
                 </div>
 
                 <!-- Sitio web (Opcional) -->
                 <div class="form-group">
                   <label for="website" class="form-label">Sitio Web</label>
-                  <input type="url" id="website" class="form-control" placeholder="Ej: https://misitioweb.com" />
+                  <input type="url" id="website" name="Sitio Web" class="form-control" placeholder="Ej: https://misitioweb.com" />
                 </div>
 
                 <!-- Mercado de Interés -->
                 <div class="form-group">
                   <label for="market-select" class="form-label">Mercado Objetivo</label>
-                  <select id="market-select" class="form-control" required>
+                  <select id="market-select" name="Mercado de Interés" class="form-control" required>
                     <option value="" disabled selected>Seleccioná un mercado</option>
                     <option value="latam">Latinoamérica (LATAM)</option>
                     <option value="eu">Unión Europea (EU)</option>
@@ -726,7 +730,7 @@
                 <!-- Presupuesto Estimado mensual -->
                 <div class="form-group">
                   <label for="budget" class="form-label">Presupuesto Mensual Adquisición</label>
-                  <select id="budget" class="form-control" required>
+                  <select id="budget" name="Presupuesto Mensual Estimado" class="form-control" required>
                     <option value="" disabled selected>Seleccioná un rango</option>
                     <option value="tier1">$5,000 - $15,000 USD</option>
                     <option value="tier2">$15,000 - $50,000 USD</option>
@@ -737,7 +741,7 @@
                 <!-- Mensaje / Detalles -->
                 <div class="form-group form-full-width">
                   <label for="message" class="form-label">Detalles del Proyecto</label>
-                  <textarea id="message" class="form-control" placeholder="Contanos brevemente qué soluciones de marketing o CRM estás buscando..."></textarea>
+                  <textarea id="message" name="Mensaje / Requisitos" class="form-control" placeholder="Contanos brevemente qué soluciones de marketing o CRM estás buscando..."></textarea>
                 </div>
               </div>
               
