@@ -1,0 +1,14 @@
+{
+  "name": "bluebull-tech-b2b",
+  "version": "1.0.0",
+  "description": "Sitio corporativo y panel CMS de BlueBull Tech",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "author": "BlueBull Tech",
+  "license": "ISC"
+}

@@ -1,0 +1,10 @@
+# Rewrites transparentes para subdominios (Status 200)
+https://es.bluebull.me/*  /es/:splat  200
+https://en.bluebull.me/*  /en/:splat  200
+https://pt.bluebull.me/*  /pt/:splat  200
+
+# Detección inteligente de idioma en el dominio principal (Status 302)
+/  https://en.bluebull.me/  302  Language=en
+/  https://pt.bluebull.me/  302  Language=pt
+/  https://es.bluebull.me/  302  Language=es
+/  https://en.bluebull.me/  302
