@@ -4,9 +4,9 @@ const TRANSLATIONS = {
   es: {
     loadingText: "Procesando...",
     errorRequired: "Este campo es requerido",
-    errorEmail: "Por favor, ingresÃ¡ un email vÃ¡lido",
-    successTitle: "Â¡Solicitud Recibida!",
-    successDesc: (name) => `Muchas gracias por contactarte con nosotros, <strong>${name}</strong>. Tu caso estÃ¡ siendo analizado por nuestro equipo de expansiÃ³n.<br><br>Un representante comercial de <strong>BlueBull Tech</strong> se pondrÃ¡ en contacto con vos en las prÃ³ximas 24 horas hÃ¡biles para coordinar una reuniÃ³n estratÃ©gica.`,
+    errorEmail: "Por favor, ingresá un email válido",
+    successTitle: "¡Solicitud Recibida!",
+    successDesc: (name) => `Muchas gracias por contactarte con nosotros, <strong>${name}</strong>. Tu caso está siendo analizado por nuestro equipo de expansión.<br><br>Un representante comercial de <strong>BlueBull Tech</strong> se pondrá en contacto con vos en las próximas 24 horas hábiles para coordinar una reunión estratégica.`,
     successBtnText: "Volver a BlueBull Principal"
   },
   en: {
@@ -19,10 +19,10 @@ const TRANSLATIONS = {
   },
   pt: {
     loadingText: "Processando...",
-    errorRequired: "Este campo Ã© obrigatÃ³rio",
-    errorEmail: "Por favor, insira um e-mail vÃ¡lido",
-    successTitle: "SolicitaÃ§Ã£o Recebida!",
-    successDesc: (name) => `Muito obrigado por entrar em contato conosco, <strong>${name}</strong>. Seu caso estÃ¡ sendo analisado por nossa equipe de expansÃ£o.<br><br>Um representante comercial da <strong>BlueBull Tech</strong> entrarÃ¡ em contato com vocÃª nas prÃ³ximas 24 horas Ãºteis para coordenar uma reuniÃ£o estratÃ©gica.`,
+    errorRequired: "Este campo é obrigatório",
+    errorEmail: "Por favor, insira um e-mail válido",
+    successTitle: "Solicitação Recebida!",
+    successDesc: (name) => `Muito obrigado por entrar em contato conosco, <strong>${name}</strong>. Seu caso está sendo analisado por nossa equipe de expansão.<br><br>Um representante comercial da <strong>BlueBull Tech</strong> entrará em contato com você nas próximas 24 horas úteis para coordenar uma reunião estratégica.`,
     successBtnText: "Voltar para o BlueBull Principal"
   }
 };
