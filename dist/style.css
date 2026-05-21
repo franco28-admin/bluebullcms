@@ -305,7 +305,7 @@ nav {
   line-height: 1.1;
   letter-spacing: -0.5px;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #ffffff 40%, #00bfff 100%);
+  background: linear-gradient(135deg, #ffffff 40%, var(--bright-blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

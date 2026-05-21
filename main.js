@@ -1,4 +1,4 @@
-﻿/* BlueBull Tech B2B Landing Page Interactive Logic */
+/* BlueBull Tech B2B Landing Page Interactive Logic */
 
 const TRANSLATIONS = {
   es: {
@@ -377,29 +377,23 @@ function initLocalization() {
     ar: {
       id: 'ar',
       name: 'Argentina',
-      flag: '????',
       color: '#75AADB',
       glow: 'rgba(117, 170, 219, 0.4)',
-      titleSuffix: 'EN EL MERCADO ARGENTINO',
-      trustBadge: 'Expertise en regulaciones provinciales y cumplimiento LOTBA.'
+      titleSuffix: 'EN EL MERCADO ARGENTINO'
     },
     co: {
       id: 'co',
       name: 'Colombia',
-      flag: '????',
       color: '#FCD116',
       glow: 'rgba(252, 209, 22, 0.4)',
-      titleSuffix: 'EN EL MERCADO COLOMBIANO',
-      trustBadge: 'Estrategias adaptadas al marco regulatorio de Coljuegos.'
+      titleSuffix: 'EN EL MERCADO COLOMBIANO'
     },
     mx: {
       id: 'mx',
-      name: 'Mï¿½xico',
-      flag: '????',
+      name: 'México',
       color: '#006847',
       glow: 'rgba(0, 104, 71, 0.4)',
-      titleSuffix: 'EN EL MERCADO MEXICANO',
-      trustBadge: 'Crecimiento asegurado bajo normativas de SEGOB.'
+      titleSuffix: 'EN EL MERCADO MEXICANO'
     }
   };
 
@@ -418,23 +412,16 @@ function initLocalization() {
     document.documentElement.style.setProperty('--bright-blue', activeMarket.color);
     document.documentElement.style.setProperty('--accent-glow', activeMarket.glow);
     
-    // 2. Modificar Hero Title
+    // 2. Modificar Hero Title (El degradado del texto se aplica desde CSS)
     const heroTitle = document.getElementById('hero-title-dynamic');
     if (heroTitle) {
-      // Reemplazamos la ltima parte del string
-      heroTitle.innerHTML = 'ESCALANDO TU VISIÓN <span style="color: var(--bright-blue);">' + activeMarket.titleSuffix + '</span>';
+      heroTitle.innerHTML = 'ESCALANDO TU VISIÓN ' + activeMarket.titleSuffix;
     }
     
-    // 3. Mostrar Trust Badge
+    // 3. Ocultar el Trust Badge base si existe
     const badge = document.getElementById('hero-trust-badge');
-    const flagSpan = document.getElementById('country-flag');
-    const textSpan = document.getElementById('country-trust-text');
-    
-    if (badge && flagSpan && textSpan) {
-      flagSpan.textContent = activeMarket.flag;
-      textSpan.textContent = activeMarket.trustBadge;
-      badge.style.display = 'flex';
-      badge.style.borderColor = activeMarket.color;
+    if (badge) {
+      badge.style.display = 'none';
     }
     
     // 4. Actualizar Formulario Oculto
