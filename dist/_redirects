@@ -1,4 +1,9 @@
-# Rewrites transparentes para subdominios (Status 200)
+﻿# Subdominios LATAM (Transparentes a español, mantienen el dominio original)
+https://ar.bluebull.me/*  /es/:splat  200
+https://co.bluebull.me/*  /es/:splat  200
+https://mx.bluebull.me/*  /es/:splat  200
+
+# Rewrites transparentes para idiomas (Status 200)
 https://es.bluebull.me/*  /es/:splat  200
 https://en.bluebull.me/*  /en/:splat  200
 https://pt.bluebull.me/*  /pt/:splat  200
