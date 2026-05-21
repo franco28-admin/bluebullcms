@@ -43,8 +43,10 @@ async function init() {
     await updateStats();
     
   } catch (err) {
+    document.body.style.opacity = '1';
+    document.body.style.pointerEvents = 'auto';
     console.error('Error al inicializar el panel:', err);
-    showBanner('settings', `Error crítico: ${err.message}`, 'error');
+    alert(`Error crítico de conexión: ${err.message}\nRevisa que las variables de entorno en Netlify estén bien configuradas.`);
   }
 }
 
