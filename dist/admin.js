@@ -54,11 +54,11 @@ function setupTabs() {
     tabs.forEach(tab => tab.classList.remove('active'));
     
     if (paneName === 'chats') {
-      document.querySelector('[onclick="switchPane(\'chats\')"]').classList.add('active');
+      document.getElementById('tab-chats').classList.add('active');
       paneChats.style.display = 'flex';
       paneSettings.style.display = 'none';
     } else if (paneName === 'settings') {
-      document.querySelector('[onclick="switchPane(\'settings\')"]').classList.add('active');
+      document.getElementById('tab-settings').classList.add('active');
       paneChats.style.display = 'none';
       paneSettings.style.display = 'block';
       updateStats(); // Recargar métricas al entrar a ajustes
@@ -71,10 +71,16 @@ function setupTabs() {
 function setupLogout() {
   const btnLogout = document.getElementById('btn-logout');
   btnLogout.addEventListener('click', async () => {
-    if (supabase) {
-      await supabase.auth.signOut();
+    try {
+      if (supabase) {
+        await supabase.auth.signOut();
+      }
+    } catch (e) {
+      console.error('Logout error:', e);
+    } finally {
+      localStorage.clear();
+      window.location.href = 'admin-login.html';
     }
-    window.location.href = 'admin-login.html';
   });
 }
 
