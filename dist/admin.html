@@ -10,6 +10,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
   
+  <script>
+    window.addEventListener('error', function(e) {
+      const errDiv = document.createElement('div');
+      errDiv.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:red;color:white;z-index:999999;padding:20px;font-size:16px;white-space:pre-wrap;box-shadow:0 5px 15px rgba(0,0,0,0.5);';
+      errDiv.innerHTML = '<b>CRITICAL JS ERROR:</b><br/>' + e.message + '<br/>File: ' + e.filename + ':' + e.lineno;
+      document.body.appendChild(errDiv);
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+      const errDiv = document.createElement('div');
+      errDiv.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:orange;color:white;z-index:999999;padding:20px;font-size:16px;white-space:pre-wrap;box-shadow:0 5px 15px rgba(0,0,0,0.5);';
+      errDiv.innerHTML = '<b>UNHANDLED PROMISE:</b><br/>' + (e.reason && e.reason.message ? e.reason.message : e.reason);
+      document.body.appendChild(errDiv);
+    });
+  </script>
+  
   <style>
     :root {
       --bg-dark: #0b0f19;
