@@ -2,7 +2,7 @@
 // LOGICA DEL DASHBOARD DE SOPORTE EN TIEMPO REAL - BLUEBULL CMS
 // ====================================================================
 
-let supabase = null;
+let supabaseClient = null;
 let currentChatId = null;
 let chatsData = []; // Caché de chats en local
 let unreadCounts = {}; // Trackeo de mensajes no leídos por chatId
@@ -16,14 +16,14 @@ async function init() {
   try {
     // Obtener claves desde la función serverless
     const response = await fetch('/.netlify/functions/config');
-    if (!response.ok) throw new Error('No se pudo obtener la configuración de Supabase.');
+    if (!response.ok) throw new Error('No se pudo obtener la configuración de supabaseClient.');
     const config = await response.json();
     
-    // Inicializar Supabase
-    supabase = window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey);
+    // Inicializar supabaseClient
+    supabaseClient = window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey);
     
     // Proteger la ruta: Verificar si el admin está logueado
-    const { data: { session } } = await supabase.auth.getSession();
+    const { data: { session } } = await supabaseClient.auth.getSession();
     if (!session) {
       // Redirigir a login si no hay sesión
       window.location.href = 'admin-login.html';
@@ -72,8 +72,8 @@ function setupLogout() {
   const btnLogout = document.getElementById('btn-logout');
   btnLogout.addEventListener('click', async () => {
     try {
-      if (supabase) {
-        await supabase.auth.signOut();
+      if (supabaseClient) {
+        await supabaseClient.auth.signOut();
       }
     } catch (e) {
       console.error('Logout error:', e);
@@ -84,11 +84,11 @@ function setupLogout() {
   });
 }
 
-// 4. Cargar Chats desde Supabase
+// 4. Cargar Chats desde supabaseClient
 async function loadChats() {
   try {
     // Traer todos los chats ordenados por su actualización más reciente
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
       .from('chats')
       .select('*')
       .order('updated_at', { ascending: false });
@@ -101,7 +101,7 @@ async function loadChats() {
     console.error('Error al cargar chats:', err);
     document.getElementById('chat-list').innerHTML = `
       <div class="empty-chats">
-        <span style="color: var(--error)">Error al conectar con las tablas. Asegurate de correr el script SQL en Supabase.</span>
+        <span style="color: var(--error)">Error al conectar con las tablas. Asegurate de correr el script SQL en supabaseClient.</span>
       </div>`;
   }
 }
@@ -166,7 +166,7 @@ async function renderChatsList(filterQuery = '') {
 // Helper: Traer el último mensaje de un chat
 async function fetchLastMessage(chatId) {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
       .from('messages')
       .select('*')
       .eq('chat_id', chatId)
@@ -210,7 +210,7 @@ async function selectChat(chatId, name, subtitle, initials) {
   historyContainer.innerHTML = '<div style="color: var(--text-muted); text-align: center; padding: 20px;">Cargando mensajes...</div>';
   
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
       .from('messages')
       .select('*')
       .eq('chat_id', chatId)
@@ -261,14 +261,14 @@ function appendMessageBubble(msg) {
   historyContainer.appendChild(msgEl);
 }
 
-// 8. Suscripción en Tiempo Real con Supabase Realtime
+// 8. Suscripción en Tiempo Real con supabaseClient Realtime
 function setupRealtimeSubscription() {
   if (messagesSubscription) {
     messagesSubscription.unsubscribe();
   }
   
   // Suscribirse a las inserciones en la tabla messages
-  messagesSubscription = supabase
+  messagesSubscription = supabaseClient
     .channel('public:messages')
     .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'messages' }, async (payload) => {
       const newMsg = payload.new;
@@ -308,7 +308,7 @@ function setupSendForm() {
     
     try {
       // Obtener el token de sesión del admin de forma segura
-      const { data: { session } } = await supabase.auth.getSession();
+      const { data: { session } } = await supabaseClient.auth.getSession();
       const token = session ? session.access_token : '';
 
       // Llamar a nuestra Netlify Function para enviar la respuesta vía Bot API de Telegram
@@ -368,8 +368,8 @@ function setupSettingsForm() {
     showBanner('settings', 'Configurando Webhook en Telegram...', 'success');
     
     try {
-      // Obtener el token de sesión activo de Supabase
-      const { data: { session } } = await supabase.auth.getSession();
+      // Obtener el token de sesión activo de supabaseClient
+      const { data: { session } } = await supabaseClient.auth.getSession();
       const tokenJWT = session ? session.access_token : '';
 
       // Llamar a la Netlify Function para registrar el webhook
@@ -400,11 +400,11 @@ function setupSettingsForm() {
 
 // 11. Cargar Estadísticas en Ajustes
 async function updateStats() {
-  if (!supabase) return;
+  if (!supabaseClient) return;
   
   try {
     // 1. Obtener chats totales
-    const { count: chatsCount, error: errChats } = await supabase
+    const { count: chatsCount, error: errChats } = await supabaseClient
       .from('chats')
       .select('*', { count: 'exact', head: true });
       
@@ -412,7 +412,7 @@ async function updateStats() {
     document.getElementById('stat-chats').textContent = chatsCount || 0;
     
     // 2. Obtener mensajes totales
-    const { count: msgsCount, error: errMsgs } = await supabase
+    const { count: msgsCount, error: errMsgs } = await supabaseClient
       .from('messages')
       .select('*', { count: 'exact', head: true });
       
