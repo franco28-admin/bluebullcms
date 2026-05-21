@@ -30,10 +30,6 @@ async function init() {
       return;
     }
     
-    // Si la sesión es válida, revelar la interfaz
-    document.body.style.opacity = '1';
-    document.body.style.pointerEvents = 'auto';
-    
     // Cargar datos
     await loadChats();
     setupRealtimeSubscription();
@@ -43,8 +39,6 @@ async function init() {
     await updateStats();
     
   } catch (err) {
-    document.body.style.opacity = '1';
-    document.body.style.pointerEvents = 'auto';
     console.error('Error al inicializar el panel:', err);
     alert(`Error crítico de conexión: ${err.message}\nRevisa que las variables de entorno en Netlify estén bien configuradas.`);
   }
