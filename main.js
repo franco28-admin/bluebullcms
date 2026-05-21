@@ -151,14 +151,17 @@ function initLeadForm() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
       })
-      .then(() => {
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Netlify no devolvió 200 OK");
+        }
         console.log("BlueBull Tech Lead Capture Submitted Successfully");
         // Show premium success card
         renderSuccessState(formContainer, document.getElementById("fullname").value);
       })
       .catch((error) => {
         console.error("Form submission error:", error);
-        alert("Hubo un error al enviar el formulario. Por favor, intentÃ¡ nuevamente.");
+        alert("Hubo un error al enviar el formulario. Por favor, intentá nuevamente.");
         
         // Revert UI to allow retry
         submitBtn.disabled = false;
