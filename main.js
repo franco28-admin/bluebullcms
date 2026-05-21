@@ -1,12 +1,12 @@
-/* BlueBull Tech B2B Landing Page Interactive Logic */
+﻿/* BlueBull Tech B2B Landing Page Interactive Logic */
 
 const TRANSLATIONS = {
   es: {
     loadingText: "Procesando...",
     errorRequired: "Este campo es requerido",
-    errorEmail: "Por favor, ingresá un email válido",
-    successTitle: "¡Solicitud Recibida!",
-    successDesc: (name) => `Muchas gracias por contactarte con nosotros, <strong>${name}</strong>. Tu caso está siendo analizado por nuestro equipo de expansión.<br><br>Un representante comercial de <strong>BlueBull Tech</strong> se pondrá en contacto con vos en las próximas 24 horas hábiles para coordinar una reunión estratégica.`,
+    errorEmail: "Por favor, ingresÃ¡ un email vÃ¡lido",
+    successTitle: "Â¡Solicitud Recibida!",
+    successDesc: (name) => `Muchas gracias por contactarte con nosotros, <strong>${name}</strong>. Tu caso estÃ¡ siendo analizado por nuestro equipo de expansiÃ³n.<br><br>Un representante comercial de <strong>BlueBull Tech</strong> se pondrÃ¡ en contacto con vos en las prÃ³ximas 24 horas hÃ¡biles para coordinar una reuniÃ³n estratÃ©gica.`,
     successBtnText: "Volver a BlueBull Principal"
   },
   en: {
@@ -19,10 +19,10 @@ const TRANSLATIONS = {
   },
   pt: {
     loadingText: "Processando...",
-    errorRequired: "Este campo é obrigatório",
-    errorEmail: "Por favor, insira um e-mail válido",
-    successTitle: "Solicitação Recebida!",
-    successDesc: (name) => `Muito obrigado por entrar em contato conosco, <strong>${name}</strong>. Seu caso está sendo analisado por nossa equipe de expansão.<br><br>Um representante comercial da <strong>BlueBull Tech</strong> entrará em contato com você nas próximas 24 horas úteis para coordenar uma reunião estratégica.`,
+    errorRequired: "Este campo Ã© obrigatÃ³rio",
+    errorEmail: "Por favor, insira um e-mail vÃ¡lido",
+    successTitle: "SolicitaÃ§Ã£o Recebida!",
+    successDesc: (name) => `Muito obrigado por entrar em contato conosco, <strong>${name}</strong>. Seu caso estÃ¡ sendo analisado por nossa equipe de expansÃ£o.<br><br>Um representante comercial da <strong>BlueBull Tech</strong> entrarÃ¡ em contato com vocÃª nas prÃ³ximas 24 horas Ãºteis para coordenar uma reuniÃ£o estratÃ©gica.`,
     successBtnText: "Voltar para o BlueBull Principal"
   }
 };
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLeadForm();
   initInteractiveMap();
   initStatCounters();
+  initLocalization();
 });
 
 /**
@@ -157,7 +158,7 @@ function initLeadForm() {
       })
       .catch((error) => {
         console.error("Form submission error:", error);
-        alert("Hubo un error al enviar el formulario. Por favor, intentá nuevamente.");
+        alert("Hubo un error al enviar el formulario. Por favor, intentÃ¡ nuevamente.");
         
         // Revert UI to allow retry
         submitBtn.disabled = false;
@@ -332,7 +333,7 @@ function animateCounter(element) {
 
   const isPercentage = text.includes("%");
   const isPlus = text.includes("+");
-  const isDegree = text.includes("°");
+  const isDegree = text.includes("Â°");
   const isMillions = text.includes("M");
 
   let start = 0;
@@ -348,7 +349,7 @@ function animateCounter(element) {
 
     if (currentStep >= steps) {
       clearInterval(timer);
-      element.textContent = text; // Set final text to keep original formats (M, +, %, °)
+      element.textContent = text; // Set final text to keep original formats (M, +, %, Â°)
     } else {
       let formattedVal = start.toFixed(isPercentage ? 1 : 0);
       if (isMillions) {
@@ -358,10 +359,116 @@ function animateCounter(element) {
       } else if (isPlus) {
         element.textContent = formattedVal + "+";
       } else if (isDegree) {
-        element.textContent = formattedVal + "°";
+        element.textContent = formattedVal + "Â°";
       } else {
         element.textContent = formattedVal;
       }
     }
   }, stepTime);
+}
+/**
+ * 6. Advanced Subdomain Localization
+ */
+function initLocalization() {
+  const hostname = window.location.hostname;
+  
+  // Market Configurations
+  const markets = {
+    ar: {
+      id: 'ar',
+      name: 'Argentina',
+      flag: '????',
+      color: '#75AADB',
+      glow: 'rgba(117, 170, 219, 0.4)',
+      titleSuffix: 'EN EL MERCADO ARGENTINO',
+      trustBadge: 'Expertise en regulaciones provinciales y cumplimiento LOTBA.'
+    },
+    co: {
+      id: 'co',
+      name: 'Colombia',
+      flag: '????',
+      color: '#FCD116',
+      glow: 'rgba(252, 209, 22, 0.4)',
+      titleSuffix: 'EN EL MERCADO COLOMBIANO',
+      trustBadge: 'Estrategias adaptadas al marco regulatorio de Coljuegos.'
+    },
+    mx: {
+      id: 'mx',
+      name: 'Mï¿½xico',
+      flag: '????',
+      color: '#006847',
+      glow: 'rgba(0, 104, 71, 0.4)',
+      titleSuffix: 'EN EL MERCADO MEXICANO',
+      trustBadge: 'Crecimiento asegurado bajo normativas de SEGOB.'
+    }
+  };
+
+  let activeMarket = null;
+  if (hostname.startsWith('ar.')) activeMarket = markets.ar;
+  else if (hostname.startsWith('co.')) activeMarket = markets.co;
+  else if (hostname.startsWith('mx.')) activeMarket = markets.mx;
+  
+  // Para pruebas locales (descomentar para testear):
+  // activeMarket = markets.ar;
+
+  if (activeMarket) {
+    console.log('BlueBull Localization Active:', activeMarket.name);
+    
+    // 1. Inyectar variables CSS
+    document.documentElement.style.setProperty('--bright-blue', activeMarket.color);
+    document.documentElement.style.setProperty('--accent-glow', activeMarket.glow);
+    
+    // 2. Modificar Hero Title
+    const heroTitle = document.getElementById('hero-title-dynamic');
+    if (heroTitle) {
+      // Reemplazamos la ltima parte del string
+      heroTitle.innerHTML = 'ESCALANDO TU VISIÓN <span style="color: var(--bright-blue);">' + activeMarket.titleSuffix + '</span>';
+    }
+    
+    // 3. Mostrar Trust Badge
+    const badge = document.getElementById('hero-trust-badge');
+    const flagSpan = document.getElementById('country-flag');
+    const textSpan = document.getElementById('country-trust-text');
+    
+    if (badge && flagSpan && textSpan) {
+      flagSpan.textContent = activeMarket.flag;
+      textSpan.textContent = activeMarket.trustBadge;
+      badge.style.display = 'flex';
+      badge.style.borderColor = activeMarket.color;
+    }
+    
+    // 4. Actualizar Formulario Oculto
+    const hiddenInput = document.getElementById('detected-country');
+    if (hiddenInput) {
+      hiddenInput.value = activeMarket.name;
+    }
+    
+    // 5. Pre-seleccionar dropdown del formulario si aplica
+    const marketSelect = document.getElementById('market-select');
+    if (marketSelect) {
+      marketSelect.value = 'latam';
+    }
+
+    // 6. Resaltar en el Mapa Interactivo (Delayed para esperar carga de CSS)
+    setTimeout(() => {
+      const pingId = '.ping-' + activeMarket.id;
+      const pathId = '#' + activeMarket.id;
+      
+      const pingEls = document.querySelectorAll(pingId);
+      pingEls.forEach(ping => {
+        ping.style.transform = "translate(-50%, -50%) scale(2)";
+        ping.style.boxShadow = "0 0 20px " + activeMarket.color + ", 0 0 40px " + activeMarket.color;
+        ping.style.filter = "brightness(1.5)";
+        ping.style.background = activeMarket.color;
+        ping.style.zIndex = "10";
+      });
+      
+      const pathEls = document.querySelectorAll(pathId);
+      pathEls.forEach(path => {
+        path.style.fill = activeMarket.glow;
+        path.style.stroke = activeMarket.color;
+        path.style.filter = "drop-shadow(0 0 12px " + activeMarket.glow + ")";
+      });
+    }, 500);
+  }
 }

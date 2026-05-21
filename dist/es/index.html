@@ -57,13 +57,17 @@
           <div class="hero-tag">
             <span class="dot"></span> Partners de Crecimiento iGaming
           </div>
-          <h1 class="hero-title">ESCALANDO TU VISIÓN EN LATAM & EU</h1>
-          <p class="hero-desc">
+          <h1 class="hero-title" id="hero-title-dynamic">ESCALANDO TU VISIÓN EN LATAM & EU</h1>
+          <p class="hero-desc" id="hero-desc-dynamic">
             Brindamos soluciones integrales de marketing digital y operaciones de adquisición de usuarios diseñadas específicamente para operadores de iGaming de alto rendimiento. Conectá con las audiencias correctas, optimizá tu conversión y expandí tu negocio.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Asociarse Ahora</a>
             <a href="https://bluebull.tech/" class="btn btn-secondary" id="hero-secondary-cta">Explorar Sitio Principal</a>
+          </div>
+          <div id="hero-trust-badge" style="display: none; margin-top: 25px; font-size: 0.9rem; color: var(--text-gray); align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 30px; width: fit-content; border: 1px solid rgba(255,255,255,0.1);">
+            <span id="country-flag" style="font-size: 1.2rem;"></span>
+            <span id="country-trust-text"></span>
           </div>
         </div>
         
@@ -688,6 +692,7 @@
             
             <form id="lead-form" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
               <input type="hidden" name="form-name" value="lead-form" />
+              <input type="hidden" id="detected-country" name="Mercado Origen" value="Global / Default" />
               <p class="hidden" style="display: none;">
                 <label>No llenes esto si eres humano: <input name="bot-field" /></label>
               </p>
