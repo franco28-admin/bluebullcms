@@ -30,6 +30,10 @@ async function init() {
       return;
     }
     
+    // Si la sesión es válida, revelar la interfaz
+    document.body.style.opacity = '1';
+    document.body.style.pointerEvents = 'auto';
+    
     // Cargar datos
     await loadChats();
     setupRealtimeSubscription();
