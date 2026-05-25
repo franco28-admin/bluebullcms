@@ -411,6 +411,83 @@ function initLocalization() {
       color: '#00e676',
       glow: 'rgba(0, 230, 118, 0.4)',
       titleSuffix: 'NO MERCADO BRASILEIRO'
+    },
+    pe: {
+      id: 'pe',
+      name: 'Perú',
+      color: '#d92b34',
+      glow: 'rgba(217, 43, 52, 0.4)',
+      titleSuffix: 'EN EL MERCADO PERUANO'
+    },
+    ec: {
+      id: 'ec',
+      name: 'Ecuador',
+      color: '#0047ab',
+      glow: 'rgba(0, 71, 171, 0.4)',
+      titleSuffix: 'EN EL MERCADO ECUATORIANO'
+    },
+    uy: {
+      id: 'uy',
+      name: 'Uruguay',
+      color: '#00b2ee',
+      glow: 'rgba(0, 178, 238, 0.4)',
+      titleSuffix: 'EN EL MERCADO URUGUAYO'
+    },
+    pa: {
+      id: 'pa',
+      name: 'Panamá',
+      color: '#002f6c',
+      glow: 'rgba(0, 47, 108, 0.4)',
+      titleSuffix: 'EN EL MERCADO PANAMEÑO'
+    },
+    cr: {
+      id: 'cr',
+      name: 'Costa Rica',
+      color: '#001c71',
+      glow: 'rgba(0, 28, 113, 0.4)',
+      titleSuffix: 'EN EL MERCADO COSTARRICENSE'
+    },
+    gt: {
+      id: 'gt',
+      name: 'Guatemala',
+      color: '#4997d0',
+      glow: 'rgba(73, 151, 208, 0.4)',
+      titleSuffix: 'EN EL MERCADO GUATEMALTECO'
+    },
+    sv: {
+      id: 'sv',
+      name: 'El Salvador',
+      color: '#0038a8',
+      glow: 'rgba(0, 56, 168, 0.4)',
+      titleSuffix: 'EN EL MERCADO SALVADOREÑO'
+    },
+    hn: {
+      id: 'hn',
+      name: 'Honduras',
+      color: '#0073cf',
+      glow: 'rgba(0, 115, 207, 0.4)',
+      titleSuffix: 'EN EL MERCADO HONDUREÑO'
+    },
+    ni: {
+      id: 'ni',
+      name: 'Nicaragua',
+      color: '#0067a5',
+      glow: 'rgba(0, 103, 165, 0.4)',
+      titleSuffix: 'EN EL MERCADO NICARAGÜENSE'
+    },
+    bz: {
+      id: 'bz',
+      name: 'Belice',
+      color: '#003f87',
+      glow: 'rgba(0, 63, 135, 0.4)',
+      titleSuffix: 'EN EL MERCADO BELICEÑO'
+    },
+    do: {
+      id: 'do',
+      name: 'República Dominicana',
+      color: '#ce1126',
+      glow: 'rgba(206, 17, 38, 0.4)',
+      titleSuffix: 'EN EL MERCADO DOMINICANO'
     }
   };
 
@@ -420,6 +497,17 @@ function initLocalization() {
   else if (hostname.startsWith('mx.')) activeMarket = markets.mx;
   else if (hostname.startsWith('ch.')) activeMarket = markets.ch;
   else if (hostname.startsWith('br.')) activeMarket = markets.br;
+  else if (hostname.startsWith('pe.')) activeMarket = markets.pe;
+  else if (hostname.startsWith('ec.')) activeMarket = markets.ec;
+  else if (hostname.startsWith('uy.')) activeMarket = markets.uy;
+  else if (hostname.startsWith('pa.')) activeMarket = markets.pa;
+  else if (hostname.startsWith('cr.')) activeMarket = markets.cr;
+  else if (hostname.startsWith('gt.')) activeMarket = markets.gt;
+  else if (hostname.startsWith('sv.')) activeMarket = markets.sv;
+  else if (hostname.startsWith('hn.')) activeMarket = markets.hn;
+  else if (hostname.startsWith('ni.')) activeMarket = markets.ni;
+  else if (hostname.startsWith('bz.')) activeMarket = markets.bz;
+  else if (hostname.startsWith('do.')) activeMarket = markets.do;
   
   // Para pruebas locales (descomentar para testear):
   // activeMarket = markets.ar;

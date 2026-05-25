@@ -4,6 +4,17 @@ https://co.bluebull.me/*  /co/:splat  200
 https://mx.bluebull.me/*  /mx/:splat  200
 https://ch.bluebull.me/*  /ch/:splat  200
 https://br.bluebull.me/*  /br/:splat  200
+https://pe.bluebull.me/*  /pe/:splat  200
+https://ec.bluebull.me/*  /ec/:splat  200
+https://uy.bluebull.me/*  /uy/:splat  200
+https://pa.bluebull.me/*  /pa/:splat  200
+https://cr.bluebull.me/*  /cr/:splat  200
+https://gt.bluebull.me/*  /gt/:splat  200
+https://sv.bluebull.me/*  /sv/:splat  200
+https://hn.bluebull.me/*  /hn/:splat  200
+https://ni.bluebull.me/*  /ni/:splat  200
+https://bz.bluebull.me/*  /bz/:splat  200
+https://do.bluebull.me/*  /do/:splat  200
 
 # Rewrites transparentes para idiomas (Status 200)
 https://es.bluebull.me/*  /es/:splat  200
