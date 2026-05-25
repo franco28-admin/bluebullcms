@@ -146,7 +146,7 @@ try {
     const countries = JSON.parse(fs.readFileSync(countriesPath, 'utf8'));
     countries.forEach(country => {
       console.log(`\n🌎 Procesando país: [${country.name.toUpperCase()}]`);
-      const baseLang = country.id === 'br' ? 'pt' : 'es';
+      const baseLang = country.id === 'br' ? 'pt' : (country.id === 'bz' ? 'en' : 'es');
       let html = template;
 
       // Replace lang tag
