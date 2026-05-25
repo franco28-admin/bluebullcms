@@ -7,6 +7,8 @@
     "business_district": "Puerto Madero",
     "business_facts": "Mercado con alta penetración móvil y una fuerte cultura deportiva, ideal para operadores de apuestas y casino. Cada provincia tiene su propia regulación, lo que requiere un partner estratégico ágil y conocedor del entramado local.",
     "partner_value": "En BlueBull Tech conocemos el terreno. Te ayudamos a localizar tu oferta para el jugador argentino, adaptando métodos de pago, lenguaje (lunfardo) y estrategias de adquisición que conviertan de verdad en el mercado más pasional de LATAM.",
+    "regulatory_body": "LOTBA (CABA) / IPLyC (Provincia de Buenos Aires)",
+    "local_payments": "Mercado Pago, DEBIN, Tarjetas Locales (Visa/Mastercard), Transferencias Inmediatas",
     "meta_title": "Agencia de Marketing iGaming B2B en Argentina | BlueBull Tech",
     "meta_description": "Impulsá tu marca de iGaming en Argentina. Estrategias de adquisición, SEO localizado y CRM adaptado al jugador argentino."
   },
@@ -18,6 +20,8 @@
     "business_district": "Las Condes (Sanhattan)",
     "business_facts": "Chile cuenta con uno de los mayores ingresos per cápita de la región y una conectividad excepcional. Es un mercado maduro en adopción tecnológica donde el jugador busca plataformas seguras, rápidas y transparentes.",
     "partner_value": "Desde Sanhattan hasta el jugador final, nuestro enfoque en Chile es premium. Creamos ecosistemas de retención y adquisición basados en datos para asegurar un LTV alto en uno de los mercados más rentables de Sudamérica.",
+    "regulatory_body": "Superintendencia de Casinos de Juego (SCJ)",
+    "local_payments": "Webpay Plus, Servipag, Khipu, Tarjetas Bancarias Locales",
     "meta_title": "Partner Estratégico iGaming en Chile | BlueBull Tech",
     "meta_description": "Escala tus operaciones de iGaming en Chile con estrategias de marketing 360°, automatización y adquisición de jugadores de alto valor."
   },
@@ -29,6 +33,8 @@
     "business_district": "Polanco / Santa Fe",
     "business_facts": "El gigante de LATAM Norte. Un mercado regulado (SEGOB) masivo con una afición deportiva inmensa. El volumen de tráfico es altísimo, pero la clave está en segmentar correctamente para no desperdiciar CPA.",
     "partner_value": "Dominamos la escala mexicana. Construimos embudos de conversión masivos y campañas de influencers y afiliados que resuenan con la cultura local, asegurando que tu marca destaque entre la fuerte competencia.",
+    "regulatory_body": "SEGOB (Dirección General de Juegos y Sorteos)",
+    "local_payments": "OXXO Pay, SPEI (Transferencia Bancaria), Tarjetas locales, Mercado Pago",
     "meta_title": "Marketing 360° para iGaming en México | BlueBull Tech",
     "meta_description": "Soluciones integrales de adquisición de usuarios y retención para casinos y apuestas deportivas en el competitivo mercado mexicano."
   },
@@ -40,6 +46,8 @@
     "business_district": "Parque de la 93 / El Chicó",
     "business_facts": "Pioneros en regulación a nivel continental (Coljuegos). El jugador colombiano es exigente, busca plataformas legales y promociones dinámicas. Es un entorno maduro donde la retención es el verdadero juego.",
     "partner_value": "En Colombia, la confianza lo es todo. Optimizamos tu CRM y desarrollamos activos SEO propios que educan y atraen al jugador colombiano hacia tu plataforma de forma orgánica y sostenible.",
+    "regulatory_body": "Coljuegos (Ente Regulador Oficial de Colombia)",
+    "local_payments": "PSE (Pagos Seguros del Estado), Efecty, Baloto, Tarjetas de Débito/Crédito",
     "meta_title": "Agencia B2B de iGaming en Colombia | BlueBull Tech",
     "meta_description": "Tu socio tecnológico y de marketing en Colombia. Adquisición regulada, estrategias SEO y retención de alto nivel."
   },
@@ -51,8 +59,10 @@
     "business_district": "Faria Lima (São Paulo)",
     "business_facts": "El mercado más grande y codiciado del mundo en este momento. Con su reciente proceso de regulación, Brasil exige una localización impecable: PIX, soporte nativo y entendimiento profundo de su pasión por el fútbol y el jogo do bicho.",
     "partner_value": "Falamos a língua do seu negócio. Nuestro equipo y operaciones en Brasil están diseñados para escalar a nivel continental, manejando afiliación masiva y SEO enfocado en Google Brasil con resultados comprobados.",
+    "regulatory_body": "SPA / Ministério da Fazenda (Secretaria de Prêmios e Apostas)",
+    "local_payments": "PIX (Transacciones Instantáneas de Brasil), Boleto Bancário, Tarjetas de Crédito",
     "meta_title": "Agência de Marketing iGaming no Brasil | BlueBull Tech",
-    "meta_description": "Acelere o crescimento do seu cassino no Brasil com estratégias de SEO, aquisição de tráfego e CRM totalmente localizados."
+    "meta_description": "Acelere o crescimento do seu cassino no Brasil con estratégias de SEO, aquisição de tráfego e CRM totalmente localizados."
   },
   {
     "id": "pe",
@@ -62,6 +72,8 @@
     "business_district": "San Isidro / Miraflores",
     "business_facts": "Con la reciente regulación formal de las apuestas deportivas y casinos online, Perú se posiciona como una plaza sumamente atractiva y de bajo riesgo regulatorio. El jugador peruano es altamente apasionado por el fútbol y exige métodos de pago integrados y locales como Yape, Plin y PagoEfectivo.",
     "partner_value": "En BlueBull Tech te ayudamos a penetrar con éxito en el mercado peruano. Localizamos tus campañas de adquisición con terminología local, optimizamos tus embudos para los monederos digitales más usados del país y generamos backlinks de altísima autoridad en portales deportivos de Perú.",
+    "regulatory_body": "MINCETUR (Dirección de Juegos de Casino y Máquinas Tragamonedas)",
+    "local_payments": "Yape, Plin, PagoEfectivo, Transferencias Bancarias directas",
     "meta_title": "Marketing iGaming B2B y Adquisición en Perú | BlueBull Tech",
     "meta_description": "Regulación de iGaming en Perú. Adquisición de jugadores a gran escala con métodos de pago locales (Yape, PagoEfectivo) y SEO localizado."
   },
@@ -73,6 +85,8 @@
     "business_district": "La Carolina (Quito)",
     "business_facts": "Un mercado dolarizado que ofrece una gran ventaja en la estabilidad de transacciones. A pesar de su complejidad regulatoria, el interés en el iGaming y las apuestas deportivas no para de crecer de manera digital e informal, demandando plataformas que garanticen seguridad y rapidez en retiros.",
     "partner_value": "Conectamos tu marca con el jugador ecuatoriano. Implementamos embudos de adquisición y retención adaptados a la moneda corriente, utilizando activos de contenido locales para capturar tráfico orgánico de alto valor en las competiciones más seguidas.",
+    "regulatory_body": "Emergente / Sin marco regulatorio formal (Dolarizado)",
+    "local_payments": "Transferencias Bancarias Locales, Tarjetas Internacionales, Efectivo vía corresponsales",
     "meta_title": "Agencia iGaming B2B y Tráfico en Ecuador | BlueBull Tech",
     "meta_description": "Escala tu marca de apuestas en Ecuador. Optimización de embudos dolarizados, adquisición móvil y SEO orgánico de alto impacto."
   },
@@ -84,6 +98,8 @@
     "business_district": "World Trade Center Montevideo",
     "business_facts": "Uruguay posee el PBI per cápita más alto de la región y una estabilidad institucional de primer nivel. Aunque el mercado tiene fuertes monopolios estatales, la digitalización y el poder adquisitivo del usuario uruguayo lo convierten en un nicho premium de altísimo valor de por vida (High LTV).",
     "partner_value": "Apuntamos a la cima. En Uruguay diseñamos campañas premium dirigidas al jugador de alto valor, optimizando las tasas de retención (CRM) y el ciclo de vida de los usuarios mediante promociones hiper-segmentadas y de máxima confianza.",
+    "regulatory_body": "Dirección General de Casinos (DGC) / DGI",
+    "local_payments": "Redpagos, Abitab, Tarjetas locales, Transferencias de e-Banca",
     "meta_title": "Estrategias de Retención iGaming en Uruguay | BlueBull Tech",
     "meta_description": "Partner estratégico de iGaming en Uruguay. CRM avanzado, retención de jugadores VIP de alto LTV y marketing premium."
   },
@@ -95,6 +111,8 @@
     "business_district": "Costa del Este / Punta Pacífica",
     "business_facts": "Panamá es el hub financiero indiscutido de Centroamérica. Cuenta con una infraestructura robusta y una regulación avanzada de licencias. El mercado local posee una excelente conectividad y una fuerte influencia del dólar estadounidense, facilitando la operatividad internacional.",
     "partner_value": "Establecemos puentes de crecimiento desde el hub financiero de América Latina. Conectamos tu marca con redes de afiliados clave y creamos portales de SEO premium para posicionar tu casino online ante los ojos de jugadores altamente rentables.",
+    "regulatory_body": "Junta de Control de Juegos (JCJ)",
+    "local_payments": "Tarjetas de Crédito (Dolarizado), ACH (Transferencias directas), Yappy",
     "meta_title": "Estrategia iGaming y Licencias en Panamá | BlueBull Tech",
     "meta_description": "Tu partner de marketing y adquisición en Panamá. Conexión de redes de afiliados, SEO localizado y cumplimiento corporativo premium."
   },
@@ -106,6 +124,8 @@
     "business_district": "Escazú",
     "business_facts": "Históricamente, Costa Rica ha sido el gran pionero y hub de licencias de juego online en el continente. Con una gran concentración de talento en soporte, desarrollo y marketing de iGaming, es la cuna de operaciones B2B más madura de la región centroamericana.",
     "partner_value": "Alineamos nuestras estrategias en la capital histórica de las operaciones iGaming. Diseñamos automatizaciones de CRM avanzadas y localized branding para asegurar que tus campañas destaquen por encima de competidores globales establecidos.",
+    "regulatory_body": "Sin ente de licencias online (Licencias de Sociedad Comercial)",
+    "local_payments": "Sinpe Móvil, Tarjetas Internacionales, Criptomonedas (USDT/BTC)",
     "meta_title": "Consultoría y Marketing B2B iGaming en Costa Rica | BlueBull Tech",
     "meta_description": "Estrategias de adquisición y optimización de CRM en Costa Rica. Posicionamiento SEO e infraestructura B2B para operadores."
   },
@@ -117,6 +137,8 @@
     "business_district": "Zona 10 (Zona Pradera)",
     "business_facts": "El mercado con mayor población de Centroamérica. Presenta una penetración móvil vertiginosa en los últimos años y un público joven ávido de opciones de entretenimiento digital interactivo y apuestas enfocadas en fútbol regional e internacional.",
     "partner_value": "Dominamos la escala en el mercado más poblado de Centroamérica. Te ayudamos a expandirte a gran escala mediante campañas de Paid Media locales y optimización móvil, reduciendo tu costo de adquisición (CPA) de manera exponencial.",
+    "regulatory_body": "Ministerio de Gobernación (Mingob) - Regulación limitada",
+    "local_payments": "Transferencias Bancarias Locales, Tarjetas de Crédito/Débito, Pago en Efectivo",
     "meta_title": "Adquisición iGaming a Gran Escala en Guatemala | BlueBull Tech",
     "meta_description": "Estrategias de paid media locales y posicionamiento SEO orgánico en Guatemala para operadores de casino y apuestas deportivas."
   },
@@ -128,6 +150,8 @@
     "business_district": "San Benito / WTC San Salvador",
     "business_facts": "El Salvador destaca por su adopción tecnológica acelerada e iniciativas financieras innovadoras. Con una gran cantidad de remesas ingresando al país y un ecosistema de pagos móviles en auge, el público local busca plataformas de juego modernas, seguras y de acreditación inmediata.",
     "partner_value": "Aceleramos tu conversión en el mercado digitalmente más disruptivo. Te ayudamos a integrar y localizar embudos con pasarelas de pago modernas y ágiles, adaptando los mensajes promocionales a la cultura digital del jugador salvadoreño.",
+    "regulatory_body": "Lotería Nacional de Beneficencia (LNB)",
+    "local_payments": "Chivo Wallet (Bitcoin / Dólares), Tarjetas de Crédito/Débito, ACH local",
     "meta_title": "Marketing Digital iGaming en El Salvador | BlueBull Tech",
     "meta_description": "Adquisición móvil y optimización de pasarelas de pago en El Salvador. Localización digital de casino y apuestas deportivas."
   },
@@ -139,6 +163,8 @@
     "business_district": "Lomas del Guijarro / San Pedro Sula",
     "business_facts": "Honduras presenta un crecimiento digital constante apoyado por una base de jugadores jóvenes entusiastas de la Liga Nacional y competiciones internacionales. Es un mercado de adquisición con gran potencial debido a la baja saturación de marcas locales premium.",
     "partner_value": "Capturamos el mercado antes que tu competencia. En BlueBull Tech desarrollamos estrategias SEO tempranas y activos de afiliación específicos para Honduras, capturando tráfico orgánico deportivo calificado con CPA altamente competitivos.",
+    "regulatory_body": "Instituto Hondureño de Turismo / Gobernación",
+    "local_payments": "Tigo Money, Tarjetas de Crédito/Débito, Corresponsales locales de efectivo",
     "meta_title": "Posicionamiento y Afiliados iGaming en Honduras | BlueBull Tech",
     "meta_description": "Adquisición orgánica con baja competencia en Honduras. Capturación de tráfico y optimización de CPA para operadores de juego."
   },
@@ -150,6 +176,8 @@
     "business_district": "Plaza España / Villa Fontana",
     "business_facts": "Un mercado dinámico enfocado principalmente en dispositivos móviles. Con el crecimiento del internet móvil de banda ancha, el interés en casinos y apuestas deportivas digitales está superando rápidamente a las salas físicas tradicionales.",
     "partner_value": "Llegamos de manera directa al jugador nicaragüense. Diseñamos landing pages ultraligeras que cargan al instante en conexiones móviles y estructuramos campañas B2B adaptadas al consumo de datos local, elevando tus conversiones orgánicas.",
+    "regulatory_body": "Ministerio de Gobernación (Gobernabilidad local)",
+    "local_payments": "Billeteras electrónicas locales, Tarjetas de débito/crédito",
     "meta_title": "Adquisición Móvil iGaming en Nicaragua | BlueBull Tech",
     "meta_description": "Campañas de carga rápida y marketing móvil localizado en Nicaragua. SEO enfocado a la conversión en casinos online."
   },
@@ -161,6 +189,8 @@
     "business_district": "Ciudad de Belice",
     "business_facts": "Belice combina la cultura caribeña y angloparlante con una regulación iGaming tradicional y flexible que ha servido a marcas internacionales durante décadas. Es una jurisdicción clave para estructuración fiscal y operaciones de red corporativas.",
     "partner_value": "Optimizamos tu estructura B2B en las puertas del Caribe. Proporcionamos soporte multilingüe (inglés/español) y conectamos tu red con la infraestructura necesaria para asegurar la entrega óptima en este histórico mercado regulado.",
+    "regulatory_body": "Gaming Control Board of Belize (GCB)",
+    "local_payments": "ACH en USD/BZD, Tarjetas Internacionales, Operaciones Cripto autorizadas",
     "meta_title": "Infraestructura B2B y Marketing iGaming en Belice | BlueBull Tech",
     "meta_description": "Partner estratégico para operadores de iGaming en Belice. Estructuras multilingües, marketing B2B y alcance regional."
   },
@@ -172,6 +202,8 @@
     "business_district": "Polígono Central",
     "business_facts": "El líder turístico y económico del Caribe cuenta con una cultura de apuestas e hipódromos sumamente arraigada. Con regulaciones activas y un jugador exigente y con buen poder adquisitivo, es un mercado caliente para casinos, loterías online y apuestas deportivas.",
     "partner_value": "Hacemos que tu marca lidere en el Caribe. Localizamos tus campañas con el acento y la calidez del jugador dominicano, y optimizamos la conversión utilizando las estrategias deportivas y de lotería online más efectivas de la región.",
+    "regulatory_body": "Dirección de Casinos y Juegos de Azar (Hacienda)",
+    "local_payments": "tPago, Tarjetas de Débito/Crédito locales, Corresponsales de Lotería en efectivo",
     "meta_title": "Agencia iGaming y Adquisición en Rep. Dominicana | BlueBull Tech",
     "meta_description": "Estrategias de adquisición localizadas en República Dominicana. SEO móvil, CRM para casinos y optimización para el jugador del Caribe."
   }

@@ -1043,8 +1043,8 @@ footer {
 
 .market-profile-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 30px;
   margin-top: 50px;
   align-items: stretch;
 }
