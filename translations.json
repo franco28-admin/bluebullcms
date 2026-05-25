@@ -76,8 +76,20 @@
     "footer_escape_link": "Go to BlueBull Main &rarr;",
     "footer_copy": "&copy; 2026 BlueBull Tech. All rights reserved. Comprehensive solutions for authorized operators.",
     "footer_terms": "Terms",
-    "footer_privacy": "Privacy",
-    "footer_contact": "Contact"
+    "footer_contact": "Contact",
+    "market_profile_subtitle": "Local Market Profile",
+    "market_profile_desc": "Localized strategies and key data to dominate the market.",
+    "market_kpi_population": "Population",
+    "market_kpi_capital": "Capital",
+    "market_kpi_business_hub": "Business Hub",
+    "market_kpi_compliance_title": "Compliance & FinTech",
+    "market_kpi_regulatory_body": "Regulatory Framework",
+    "market_kpi_local_payments": "Payment Methods",
+    "market_playbook_title_doing_business": "Doing Business in",
+    "market_playbook_title_why_bluebull": "Why BlueBull Tech in",
+    "market_playbook_bullet_acquisition": "Localized Acquisition & Affiliation",
+    "market_playbook_bullet_compliance": "Regulatory Compliance & Infrastructure",
+    "market_playbook_bullet_support": "Native Support & Language by Jurisdiction"
   },
   "pt": {
     "meta_title": "BlueBull Tech B2B - Soluções Globais de iGaming e Marketing Digital",
@@ -155,7 +167,19 @@
     "footer_escape_link": "Ir para o BlueBull Principal &rarr;",
     "footer_copy": "&copy; 2026 BlueBull Tech. Todos os direitos reservados. Soluções abrangentes para operadores autorizados.",
     "footer_terms": "Termos",
-    "footer_privacy": "Privacidade",
-    "footer_contact": "Contato"
+    "footer_contact": "Contato",
+    "market_profile_subtitle": "Perfil do Mercado Local",
+    "market_profile_desc": "Estratégias localizadas e dados importantes para dominar o mercado.",
+    "market_kpi_population": "População",
+    "market_kpi_capital": "Capital",
+    "market_kpi_business_hub": "Business Hub",
+    "market_kpi_compliance_title": "Conformidade & FinTech",
+    "market_kpi_regulatory_body": "Marco Regulatório",
+    "market_kpi_local_payments": "Meios de Pagamento",
+    "market_playbook_title_doing_business": "Fazer Negócios em",
+    "market_playbook_title_why_bluebull": "Por que BlueBull Tech em",
+    "market_playbook_bullet_acquisition": "Aquisição & Afiliação Localizada",
+    "market_playbook_bullet_compliance": "Conformidade Regulatória & Infraestrutura",
+    "market_playbook_bullet_support": "Suporte & Idioma Nativo por Jurisdição"
   }
 }
