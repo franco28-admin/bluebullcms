@@ -380,113 +380,129 @@ function initLocalization() {
     ar: {
       id: 'ar',
       name: 'Argentina',
-      color: '#75AADB',
-      glow: 'rgba(117, 170, 219, 0.4)',
+      color: '#70a1ff',
+      rgb: '112, 161, 255',
+      glow: 'rgba(112, 161, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO ARGENTINO'
     },
     co: {
       id: 'co',
       name: 'Colombia',
-      color: '#FCD116',
-      glow: 'rgba(252, 209, 22, 0.4)',
+      color: '#eccc68',
+      rgb: '236, 204, 104',
+      glow: 'rgba(236, 204, 104, 0.4)',
       titleSuffix: 'EN EL MERCADO COLOMBIANO'
     },
     mx: {
       id: 'mx',
       name: 'México',
-      color: '#006847',
-      glow: 'rgba(0, 104, 71, 0.4)',
+      color: '#2ed573',
+      rgb: '46, 213, 115',
+      glow: 'rgba(46, 213, 115, 0.4)',
       titleSuffix: 'EN EL MERCADO MEXICANO'
     },
     ch: {
       id: 'ch',
       name: 'Chile',
-      color: '#e63946',
-      glow: 'rgba(230, 57, 70, 0.4)',
+      color: '#ff4757',
+      rgb: '255, 71, 87',
+      glow: 'rgba(255, 71, 87, 0.4)',
       titleSuffix: 'EN EL MERCADO CHILENO'
     },
     br: {
       id: 'br',
       name: 'Brasil',
-      color: '#00e676',
-      glow: 'rgba(0, 230, 118, 0.4)',
+      color: '#2ed573',
+      rgb: '46, 213, 115',
+      glow: 'rgba(46, 213, 115, 0.4)',
       titleSuffix: 'NO MERCADO BRASILEIRO'
     },
     pe: {
       id: 'pe',
       name: 'Perú',
-      color: '#d92b34',
-      glow: 'rgba(217, 43, 52, 0.4)',
+      color: '#ff4757',
+      rgb: '255, 71, 87',
+      glow: 'rgba(255, 71, 87, 0.4)',
       titleSuffix: 'EN EL MERCADO PERUANO'
     },
     ec: {
       id: 'ec',
       name: 'Ecuador',
-      color: '#0047ab',
-      glow: 'rgba(0, 71, 171, 0.4)',
+      color: '#1e90ff',
+      rgb: '30, 144, 255',
+      glow: 'rgba(30, 144, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO ECUATORIANO'
     },
     uy: {
       id: 'uy',
       name: 'Uruguay',
       color: '#00b2ee',
+      rgb: '0, 178, 238',
       glow: 'rgba(0, 178, 238, 0.4)',
       titleSuffix: 'EN EL MERCADO URUGUAYO'
     },
     pa: {
       id: 'pa',
       name: 'Panamá',
-      color: '#002f6c',
-      glow: 'rgba(0, 47, 108, 0.4)',
+      color: '#2979ff',
+      rgb: '41, 121, 255',
+      glow: 'rgba(41, 121, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO PANAMEÑO'
     },
     cr: {
       id: 'cr',
       name: 'Costa Rica',
-      color: '#001c71',
-      glow: 'rgba(0, 28, 113, 0.4)',
+      color: '#00e5ff',
+      rgb: '0, 229, 255',
+      glow: 'rgba(0, 229, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO COSTARRICENSE'
     },
     gt: {
       id: 'gt',
       name: 'Guatemala',
-      color: '#4997d0',
-      glow: 'rgba(73, 151, 208, 0.4)',
+      color: '#1e90ff',
+      rgb: '30, 144, 255',
+      glow: 'rgba(30, 144, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO GUATEMALTECO'
     },
     sv: {
       id: 'sv',
       name: 'El Salvador',
-      color: '#0038a8',
-      glow: 'rgba(0, 56, 168, 0.4)',
+      color: '#3d5afe',
+      rgb: '61, 90, 254',
+      glow: 'rgba(61, 90, 254, 0.4)',
       titleSuffix: 'EN EL MERCADO SALVADOREÑO'
     },
     hn: {
       id: 'hn',
       name: 'Honduras',
-      color: '#0073cf',
-      glow: 'rgba(0, 115, 207, 0.4)',
+      color: '#00d2ff',
+      rgb: '0, 210, 255',
+      glow: 'rgba(0, 210, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO HONDUREÑO'
     },
     ni: {
       id: 'ni',
       name: 'Nicaragua',
-      color: '#0067a5',
-      glow: 'rgba(0, 103, 165, 0.4)',
+      color: '#00a2ff',
+      rgb: '0, 162, 255',
+      glow: 'rgba(0, 162, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO NICARAGÜENSE'
     },
     bz: {
       id: 'bz',
       name: 'Belice',
-      color: '#003f87',
-      glow: 'rgba(0, 63, 135, 0.4)',
+      color: '#2979ff',
+      rgb: '41, 121, 255',
+      glow: 'rgba(41, 121, 255, 0.4)',
       titleSuffix: 'EN EL MERCADO BELICEÑO'
     },
     do: {
       id: 'do',
       name: 'República Dominicana',
-      color: '#ce1126',
-      glow: 'rgba(206, 17, 38, 0.4)',
+      color: '#ff4757',
+      rgb: '255, 71, 87',
+      glow: 'rgba(255, 71, 87, 0.4)',
       titleSuffix: 'EN EL MERCADO DOMINICANO'
     }
   };
@@ -517,6 +533,7 @@ function initLocalization() {
     
     // 1. Inyectar variables CSS
     document.documentElement.style.setProperty('--bright-blue', activeMarket.color);
+    document.documentElement.style.setProperty('--bright-blue-rgb', activeMarket.rgb);
     document.documentElement.style.setProperty('--accent-glow', activeMarket.glow);
     
     // 2. Modificar Hero Title (El degradado del texto se aplica desde CSS)

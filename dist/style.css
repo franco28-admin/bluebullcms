@@ -14,7 +14,7 @@
   --text-secondary: #9ca3af;
   --text-muted: #6b7280;
   --accent-glow: rgba(0, 191, 255, 0.25);
-  --accent-gradient: linear-gradient(135deg, #00bfff 0%, #0056b3 100%);
+  --accent-gradient: linear-gradient(135deg, var(--bright-blue) 0%, rgba(var(--bright-blue-rgb), 0.45) 100%);
   --dark-gradient: linear-gradient(180deg, #070913 0%, #0c0f24 100%);
 
   /* Typography */
