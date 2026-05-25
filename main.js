@@ -397,6 +397,20 @@ function initLocalization() {
       color: '#006847',
       glow: 'rgba(0, 104, 71, 0.4)',
       titleSuffix: 'EN EL MERCADO MEXICANO'
+    },
+    ch: {
+      id: 'ch',
+      name: 'Chile',
+      color: '#e63946',
+      glow: 'rgba(230, 57, 70, 0.4)',
+      titleSuffix: 'EN EL MERCADO CHILENO'
+    },
+    br: {
+      id: 'br',
+      name: 'Brasil',
+      color: '#00e676',
+      glow: 'rgba(0, 230, 118, 0.4)',
+      titleSuffix: 'NO MERCADO BRASILEIRO'
     }
   };
 
@@ -404,6 +418,8 @@ function initLocalization() {
   if (hostname.startsWith('ar.')) activeMarket = markets.ar;
   else if (hostname.startsWith('co.')) activeMarket = markets.co;
   else if (hostname.startsWith('mx.')) activeMarket = markets.mx;
+  else if (hostname.startsWith('ch.')) activeMarket = markets.ch;
+  else if (hostname.startsWith('br.')) activeMarket = markets.br;
   
   // Para pruebas locales (descomentar para testear):
   // activeMarket = markets.ar;

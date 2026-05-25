@@ -1021,3 +1021,253 @@ footer {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   Local Market Profile Section (Premium Dashboard Design)
+   ========================================================================== */
+#local-market {
+  position: relative;
+  background: radial-gradient(circle at 70% 30%, rgba(var(--bright-blue-rgb), 0.05) 0%, transparent 60%),
+              rgba(10, 15, 30, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+#local-market .section-title {
+  background: linear-gradient(135deg, #ffffff 30%, var(--bright-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.market-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: stretch;
+}
+
+/* Dashboard left column cards container */
+.market-dashboard-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(13, 18, 36, 0.45);
+  border: 1px solid rgba(0, 191, 255, 0.1);
+  border-radius: 24px;
+  padding: 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: var(--shadow-card);
+}
+
+.market-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.market-dashboard-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 191, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--bright-blue);
+  font-family: var(--font-headers);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.market-dashboard-badge .pulse-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--bright-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--bright-blue);
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Individual KPI Stat Cards */
+.market-kpi-card {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.market-kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 4px;
+  background: var(--card-accent, var(--bright-blue));
+  transition: var(--transition-smooth);
+}
+
+.market-kpi-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(0, 191, 255, 0.15);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.market-kpi-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.market-kpi-card:hover .market-kpi-icon-wrapper {
+  background: var(--card-accent-alpha, rgba(0, 191, 255, 0.1));
+  border-color: var(--card-accent, var(--bright-blue));
+  box-shadow: 0 0 10px var(--card-accent-alpha, rgba(0, 191, 255, 0.1));
+}
+
+.market-kpi-icon-wrapper svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--card-accent, var(--bright-blue));
+}
+
+.market-kpi-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-kpi-label {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.market-kpi-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* Playbook Right Panel */
+.market-playbook-card {
+  background: linear-gradient(135deg, rgba(13, 18, 36, 0.5) 0%, rgba(7, 9, 19, 0.75) 100%);
+  border: 1px solid rgba(0, 191, 255, 0.12);
+  border-radius: 28px;
+  padding: 40px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: relative;
+}
+
+/* Radial Glow behind playbook */
+.market-playbook-card::after {
+  content: '';
+  position: absolute;
+  top: 10%; right: 10%;
+  width: 200px;
+  height: 200px;
+  background: var(--bright-blue);
+  filter: blur(120px);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.playbook-section {
+  position: relative;
+  z-index: 2;
+}
+
+.playbook-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.playbook-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--bright-blue);
+}
+
+.playbook-title {
+  font-family: var(--font-headers);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.playbook-text {
+  color: #d1d5db;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.playbook-text strong {
+  color: var(--bright-blue);
+  font-weight: 600;
+}
+
+/* Bullet proof strategies list inside Partner playbook */
+.playbook-strategies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+}
+
+.playbook-strategy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.playbook-strategy-item svg {
+  width: 16px;
+  height: 16px;
+  fill: #4ade80;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Responsive grid tweak */
+@media (max-width: 992px) {
+  .market-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+

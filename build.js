@@ -124,6 +124,9 @@ try {
       }
     });
 
+    // Remove the local-market section for generic language pages
+    html = html.replace(/<!-- Local Market Profile Section \(Dynamic\) -->[\s\S]*?<!-- B2B Lead Form Section -->/, '<!-- B2B Lead Form Section -->');
+
     // Replace relative assets paths with absolute paths for the subdirectories
     // style.css -> /style.css
     // main.js -> /main.js

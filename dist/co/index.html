@@ -678,46 +678,115 @@
     </section>
 
     <!-- Local Market Profile Section (Dynamic) -->
-    <section class="section" id="local-market" style="background: rgba(10, 15, 30, 0.5); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <section class="section" id="local-market">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-subtitle">Perfil del Mercado</span>
+          <span class="section-subtitle">
+            <span class="pulse-dot" style="display: inline-block; width: 6px; height: 6px; background: var(--bright-blue); border-radius: 50%; box-shadow: 0 0 6px var(--bright-blue); margin-right: 8px;"></span>
+            Perfil del Mercado Local
+          </span>
           <h2 class="section-title">Colombia</h2>
           <p class="section-desc">Estrategias localizadas y datos clave para dominar el mercado.</p>
         </div>
         
-        <div class="market-profile-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-          <!-- Data Cards -->
-          <div class="market-data-cards reveal" style="display: flex; flex-direction: column; gap: 20px;">
-            <div class="stat-card" style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary-color);">
-              <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 5px;">Población</h4>
-              <p style="font-size: 1.5rem; font-weight: 700; color: #fff;">51 Millones</p>
+        <div class="market-profile-grid">
+          <!-- Left Column: KPI Stats Dashboard Panel -->
+          <div class="market-dashboard-panel reveal">
+            <div class="market-dashboard-header">
+              <span class="market-dashboard-badge">
+                <span class="pulse-dot"></span>
+                iGaming KPIs
+              </span>
             </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border-left: 4px solid var(--secondary-color);">
-              <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 5px;">Capital</h4>
-              <p style="font-size: 1.5rem; font-weight: 700; color: #fff;">Bogotá</p>
+            
+            <!-- KPI 1: Population -->
+            <div class="market-kpi-card" style="--card-accent: var(--bright-blue); --card-accent-alpha: rgba(0, 191, 255, 0.12);">
+              <div class="market-kpi-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+              </div>
+              <div class="market-kpi-info">
+                <span class="market-kpi-label">Población</span>
+                <span class="market-kpi-value">51 Millones</span>
+              </div>
             </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border-left: 4px solid #4ade80;">
-              <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 5px;">Business Hub</h4>
-              <p style="font-size: 1.5rem; font-weight: 700; color: #fff;">Parque de la 93 / El Chicó</p>
+            
+            <!-- KPI 2: Capital -->
+            <div class="market-kpi-card" style="--card-accent: #bf80ff; --card-accent-alpha: rgba(191, 128, 255, 0.12);">
+              <div class="market-kpi-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.3 6.91.97-5 4.89 1.18 6.88-6.18-3.25-6.18 3.25 1.18-6.88-5-4.89 6.91-.97L12 2z"/>
+                </svg>
+              </div>
+              <div class="market-kpi-info">
+                <span class="market-kpi-label">Capital</span>
+                <span class="market-kpi-value">Bogotá</span>
+              </div>
+            </div>
+            
+            <!-- KPI 3: Business District -->
+            <div class="market-kpi-card" style="--card-accent: #4ade80; --card-accent-alpha: rgba(74, 222, 128, 0.12);">
+              <div class="market-kpi-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <div class="market-kpi-info">
+                <span class="market-kpi-label">Business Hub</span>
+                <span class="market-kpi-value">Parque de la 93 / El Chicó</span>
+              </div>
             </div>
           </div>
           
-          <!-- Text Info -->
-          <div class="market-info-text reveal" style="transition-delay: 0.2s; background: rgba(255,255,255,0.02); padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);">
-            <h3 style="margin-bottom: 20px; font-size: 1.3rem; color: #fff;">Hacer Negocios en Colombia</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 25px;">
-              Pioneros en regulación a nivel continental (Coljuegos). El jugador colombiano es exigente, busca plataformas legales y promociones dinámicas. Es un entorno maduro donde la retención es el verdadero juego.
-            </p>
+          <!-- Right Column: Business Strategy Playbook -->
+          <div class="market-playbook-card reveal" style="transition-delay: 0.2s;">
+            <!-- Section 1: Business Overview -->
+            <div class="playbook-section">
+              <div class="playbook-section-header">
+                <svg class="playbook-icon" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <h3 class="playbook-title">Hacer Negocios en Colombia</h3>
+              </div>
+              <p class="playbook-text">
+                Pioneros en regulación a nivel continental (Coljuegos). El jugador colombiano es exigente, busca plataformas legales y promociones dinámicas. Es un entorno maduro donde la retención es el verdadero juego.
+              </p>
+            </div>
             
-            <h3 style="margin-bottom: 20px; font-size: 1.3rem; color: #fff;">¿Por qué BlueBull Tech?</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7;">
-              En Colombia, la confianza lo es todo. Optimizamos tu CRM y desarrollamos activos SEO propios que educan y atraen al jugador colombiano hacia tu plataforma de forma orgánica y sostenible.
-            </p>
+            <!-- Section 2: Partner value -->
+            <div class="playbook-section">
+              <div class="playbook-section-header">
+                <svg class="playbook-icon" viewBox="0 0 24 24" style="fill: #4ade80;">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h3 class="playbook-title">¿Por qué BlueBull Tech en Colombia?</h3>
+              </div>
+              <p class="playbook-text">
+                En Colombia, la confianza lo es todo. Optimizamos tu CRM y desarrollamos activos SEO propios que educan y atraen al jugador colombiano hacia tu plataforma de forma orgánica y sostenible.
+              </p>
+              
+              <!-- Value Bullets -->
+              <div class="playbook-strategies">
+                <div class="playbook-strategy-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span>Adquisición & Afiliación Localizada</span>
+                </div>
+                <div class="playbook-strategy-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span>Cumplimiento Regulatorio e Infraestructura</span>
+                </div>
+                <div class="playbook-strategy-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span>Soporte e Idioma Nativo por Jurisdicción</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
 
 
     <!-- B2B Lead Form Section -->
