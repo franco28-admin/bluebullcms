@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ar",
+    "name": "Argentina",
+    "population": "46 Millones",
+    "capital": "Buenos Aires",
+    "business_district": "Puerto Madero",
+    "business_facts": "Mercado con alta penetración móvil y una fuerte cultura deportiva, ideal para operadores de apuestas y casino. Cada provincia tiene su propia regulación, lo que requiere un partner estratégico ágil y conocedor del entramado local.",
+    "partner_value": "En BlueBull Tech conocemos el terreno. Te ayudamos a localizar tu oferta para el jugador argentino, adaptando métodos de pago, lenguaje (lunfardo) y estrategias de adquisición que conviertan de verdad en el mercado más pasional de LATAM.",
+    "meta_title": "Agencia de Marketing iGaming B2B en Argentina | BlueBull Tech",
+    "meta_description": "Impulsá tu marca de iGaming en Argentina. Estrategias de adquisición, SEO localizado y CRM adaptado al jugador argentino."
+  },
+  {
+    "id": "ch",
+    "name": "Chile",
+    "population": "19 Millones",
+    "capital": "Santiago",
+    "business_district": "Las Condes (Sanhattan)",
+    "business_facts": "Chile cuenta con uno de los mayores ingresos per cápita de la región y una conectividad excepcional. Es un mercado maduro en adopción tecnológica donde el jugador busca plataformas seguras, rápidas y transparentes.",
+    "partner_value": "Desde Sanhattan hasta el jugador final, nuestro enfoque en Chile es premium. Creamos ecosistemas de retención y adquisición basados en datos para asegurar un LTV alto en uno de los mercados más rentables de Sudamérica.",
+    "meta_title": "Partner Estratégico iGaming en Chile | BlueBull Tech",
+    "meta_description": "Escala tus operaciones de iGaming en Chile con estrategias de marketing 360°, automatización y adquisición de jugadores de alto valor."
+  },
+  {
+    "id": "mx",
+    "name": "México",
+    "population": "128 Millones",
+    "capital": "Ciudad de México",
+    "business_district": "Polanco / Santa Fe",
+    "business_facts": "El gigante de LATAM Norte. Un mercado regulado (SEGOB) masivo con una afición deportiva inmensa. El volumen de tráfico es altísimo, pero la clave está en segmentar correctamente para no desperdiciar CPA.",
+    "partner_value": "Dominamos la escala mexicana. Construimos embudos de conversión masivos y campañas de influencers y afiliados que resuenan con la cultura local, asegurando que tu marca destaque entre la fuerte competencia.",
+    "meta_title": "Marketing 360° para iGaming en México | BlueBull Tech",
+    "meta_description": "Soluciones integrales de adquisición de usuarios y retención para casinos y apuestas deportivas en el competitivo mercado mexicano."
+  },
+  {
+    "id": "co",
+    "name": "Colombia",
+    "population": "51 Millones",
+    "capital": "Bogotá",
+    "business_district": "Parque de la 93 / El Chicó",
+    "business_facts": "Pioneros en regulación a nivel continental (Coljuegos). El jugador colombiano es exigente, busca plataformas legales y promociones dinámicas. Es un entorno maduro donde la retención es el verdadero juego.",
+    "partner_value": "En Colombia, la confianza lo es todo. Optimizamos tu CRM y desarrollamos activos SEO propios que educan y atraen al jugador colombiano hacia tu plataforma de forma orgánica y sostenible.",
+    "meta_title": "Agencia B2B de iGaming en Colombia | BlueBull Tech",
+    "meta_description": "Tu socio tecnológico y de marketing en Colombia. Adquisición regulada, estrategias SEO y retención de alto nivel."
+  },
+  {
+    "id": "br",
+    "name": "Brasil",
+    "population": "214 Millones",
+    "capital": "Brasilia",
+    "business_district": "Faria Lima (São Paulo)",
+    "business_facts": "El mercado más grande y codiciado del mundo en este momento. Con su reciente proceso de regulación, Brasil exige una localización impecable: PIX, soporte nativo y entendimiento profundo de su pasión por el fútbol y el jogo do bicho.",
+    "partner_value": "Falamos a língua do seu negócio. Nuestro equipo y operaciones en Brasil están diseñados para escalar a nivel continental, manejando afiliación masiva y SEO enfocado en Google Brasil con resultados comprobados.",
+    "meta_title": "Agência de Marketing iGaming no Brasil | BlueBull Tech",
+    "meta_description": "Acelere o crescimento do seu cassino no Brasil com estratégias de SEO, aquisição de tráfego e CRM totalmente localizados."
+  }
+]

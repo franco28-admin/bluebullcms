@@ -249,9 +249,7 @@
             <div class="market-pill active" data-region="latam">Mexico</div>
             <div class="market-pill active" data-region="latam">Colombia</div>
             <div class="market-pill active" data-region="latam">Argentina</div>
-            <div class="market-pill active" data-region="eu">Spain</div>
-            <div class="market-pill active" data-region="eu">Portugal</div>
-            <div class="market-pill active" data-region="eu">Malta</div>
+            <div class="market-pill active" data-region="latam">Chile</div>
           </div>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">
             * We possess a robust network infrastructure that optimizes delivery in each of these jurisdictions in a compliant and secure manner.
@@ -674,11 +672,53 @@
           <div class="map-ping ping-co" title="Colombia Hub"></div>
           <div class="map-ping ping-mx" title="México Hub"></div>
           <div class="map-ping ping-ar" title="Argentina Hub"></div>
-          <div class="map-ping ping-es-pt" title="España & Portugal Hub"></div>
-          <div class="map-ping ping-mt" title="Malta Hub"></div>
+          <div class="map-ping ping-cl" title="Chile Hub" style="top: 75%; left: 32%;"></div>
         </div> <!-- Close map-wrapper -->
       </div> <!-- Close market-map-container -->
     </section>
+
+    <!-- Local Market Profile Section (Dynamic) -->
+    <section class="section" id="local-market" style="background: rgba(10, 15, 30, 0.5); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Perfil del Mercado</span>
+          <h2 class="section-title"><!--country:name--></h2>
+          <p class="section-desc">Estrategias localizadas y datos clave para dominar el mercado.</p>
+        </div>
+        
+        <div class="market-profile-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+          <!-- Data Cards -->
+          <div class="market-data-cards reveal" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="stat-card" style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border-left: 4px solid var(--primary-color);">
+              <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 5px;">Población</h4>
+              <p style="font-size: 1.5rem; font-weight: 700; color: #fff;"><!--country:population--></p>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border-left: 4px solid var(--secondary-color);">
+              <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 5px;">Capital</h4>
+              <p style="font-size: 1.5rem; font-weight: 700; color: #fff;"><!--country:capital--></p>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px; border-left: 4px solid #4ade80;">
+              <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 5px;">Business Hub</h4>
+              <p style="font-size: 1.5rem; font-weight: 700; color: #fff;"><!--country:business_district--></p>
+            </div>
+          </div>
+          
+          <!-- Text Info -->
+          <div class="market-info-text reveal" style="transition-delay: 0.2s; background: rgba(255,255,255,0.02); padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="margin-bottom: 20px; font-size: 1.3rem; color: #fff;">Hacer Negocios en <!--country:name--></h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 25px;">
+              <!--country:business_facts-->
+            </p>
+            
+            <h3 style="margin-bottom: 20px; font-size: 1.3rem; color: #fff;">¿Por qué BlueBull Tech?</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              <!--country:partner_value-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- B2B Lead Form Section -->
     <section class="section form-section" id="contact">

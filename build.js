@@ -137,6 +137,74 @@ try {
     console.log(`✅ Archivo index.html generado con éxito en /dist/${lang}/index.html`);
   });
 
+  // Generate country specific pages
+  const countriesPath = path.join(rootDir, 'countries.json');
+  if (fs.existsSync(countriesPath)) {
+    const countries = JSON.parse(fs.readFileSync(countriesPath, 'utf8'));
+    countries.forEach(country => {
+      console.log(`\n🌎 Procesando país: [${country.name.toUpperCase()}]`);
+      const baseLang = country.id === 'br' ? 'pt' : 'es';
+      let html = template;
+
+      // Replace lang tag
+      html = html.replace(/<html lang="es"/, `<html lang="${baseLang}"`);
+
+      // Apply base language translations if not Spanish
+      if (baseLang !== 'es') {
+        const trans = translations[baseLang];
+        if (trans) {
+          const i18nRegex = /<!--i18n:(\w+)-->([\s\S]*?)<!--\/i18n-->/g;
+          html = html.replace(i18nRegex, (match, key, originalContent) => {
+            if (key.startsWith('input_')) {
+              const suffix = key.substring(6);
+              const translatedPlaceholder = trans[`placeholder_${suffix}`];
+              if (translatedPlaceholder) {
+                return originalContent.replace(/placeholder="[\s\S]*?"/, `placeholder="${translatedPlaceholder}"`);
+              }
+              return originalContent;
+            }
+            return trans[key] !== undefined ? trans[key] : originalContent;
+          });
+        }
+      } else {
+        // Strip i18n comments for Spanish
+        const i18nRegex = /<!--i18n:(\w+)-->([\s\S]*?)<!--\/i18n-->/g;
+        html = html.replace(i18nRegex, '$2');
+      }
+
+      // Inject Country specific data
+      Object.keys(country).forEach(key => {
+        const countryRegex = new RegExp(`<!--country:${key}-->`, 'g');
+        html = html.replace(countryRegex, country[key]);
+      });
+
+      // Override meta tags with country specific ones for SEO
+      html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${country.meta_title}</title>`);
+      html = html.replace(
+        /<meta name="description" content="[\s\S]*?"\s*\/?>/,
+        `<meta name="description" content="${country.meta_description}" />`
+      );
+      html = html.replace(
+        /<meta property="og:title" content="[\s\S]*?"\s*\/?>/,
+        `<meta property="og:title" content="${country.meta_title}" />`
+      );
+      html = html.replace(
+        /<meta property="og:description" content="[\s\S]*?"\s*\/?>/,
+        `<meta property="og:description" content="${country.meta_description}" />`
+      );
+
+      // Fix assets paths
+      html = html.replace(/href="style\.css"/g, 'href="/style.css"');
+      html = html.replace(/src="main\.js"/g, 'src="/main.js"');
+
+      // Save to dist/country.id/index.html
+      const countryDir = path.join(distDir, country.id);
+      ensureDirExists(countryDir);
+      fs.writeFileSync(path.join(countryDir, 'index.html'), html, 'utf8');
+      console.log(`✅ Archivo index.html generado con éxito en /dist/${country.id}/index.html`);
+    });
+  }
+
   // 3. Copy global assets to /dist root
   console.log('\n📦 Copiando recursos globales a la carpeta /dist...');
   fs.copyFileSync(path.join(rootDir, 'style.css'), path.join(distDir, 'style.css'));
